@@ -1,7 +1,7 @@
 Avaliação de Candidato
 ==============================
 
-Olá Andressa.
+Olá Ector.
 
 Essa avaliação prática consiste em 3 etapas para avaliarmos seu conhecimento em C#, SQL e Front-End(HTML5, CSS e JavaScript)
 
