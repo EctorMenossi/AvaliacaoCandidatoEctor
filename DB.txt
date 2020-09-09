@@ -1,0 +1,33 @@
+
+USE RegisterDB;
+
+-- Criando tabelas e colunas. --
+CREATE TABLE Veiculo(
+Id integer  NOT NULL Identity,
+Placa varchar (8) NOT NULL,
+Marca varchar (25) NOT NULL,
+Modelo varchar (25)NOT NULL,
+AnoModelo varchar (25)  NOT NULL,
+AnoFabricação varchar (25)  NOT NULL,
+PRIMARY KEY (Id),
+
+);
+CREATE TABLE Cliente(
+Nome varchar (50) NOT NULL,
+CPF integer  NOT NULL,
+Telefone varchar (15)NOT NULL,
+Endereco varchar (100) NOT NULL,
+PRIMARY KEY (CPF),
+Id integer,
+    CONSTRAINT Veículo FOREIGN KEY (Id) REFERENCES Veiculo (Id)
+);
+
+CREATE TABLE Servico(
+Nome varchar(50) NOT NULL,
+Descricao varchar(25) NOT NULL,
+Cliente varchar(25) NOT NULL,
+Veiculo varchar(100) NOT NULL,
+Valor varchar(100) NOT NULL,
+CPF integer,
+    CONSTRAINT Cliente FOREIGN KEY (CPF) REFERENCES Cliente (CPF)
+);
